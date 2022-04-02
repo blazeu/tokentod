@@ -45,7 +45,7 @@ function PackageContent({ name, value }) {
         ) : (
           <div className="space-y-4">
             {Object.entries(value).map(([key, value]) => (
-              <PackageContent name={key} value={value} />
+              <PackageContent key={key} name={key} value={value} />
             ))}
           </div>
         )}
