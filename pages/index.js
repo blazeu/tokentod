@@ -59,6 +59,10 @@ function Value({ value, type }) {
     return <Color value={value} />;
   }
 
+  if (type === "color" && typeof value !== "string") {
+    return <Value value={value.value} type={type} />;
+  }
+
   return JSON.stringify(value);
 }
 
